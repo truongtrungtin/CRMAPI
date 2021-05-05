@@ -19,26 +19,26 @@ namespace CRMAPI.Controllers
             return new NhanVienDAO().GetAll();
         }
 
-        // GET api/values/5
+        // GET api/NhanVien/5
         public NHANVIEN Get(Guid Id)
         {
             return new NhanVienDAO().GetById(Id);
         }
 
-        // POST api/values
+        // POST api/NhanVien
         public void Post([FromBody] NHANVIEN nHANVIEN)
         {
             new NhanVienDAO().Create(nHANVIEN);
         }
 
-        // PUT api/values/5
+        // PUT api/NhanVien/5
         public void Put(Guid Id, [FromBody] NHANVIEN nHANVIEN)
         {
             nHANVIEN.NHANVIEN_Id = Id;
             new NhanVienDAO().Edit(nHANVIEN);
         }
 
-        // DELETE api/values/5
+        // DELETE api/NhanVien/5
         public void Delete(Guid Id)
         {
             new NhanVienDAO().Delete(Id);

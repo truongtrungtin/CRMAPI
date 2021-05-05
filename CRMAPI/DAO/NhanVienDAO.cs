@@ -88,6 +88,7 @@ namespace CRMAPI.DAO
         {
             try
             {
+                nHANVIEN.NHANVIEN_Id = Guid.NewGuid();
                 nHANVIEN.NHANVIEN_Code = GetCode();
                 nHANVIEN.NHANVIEN_Pass = GetMD5(nHANVIEN.NHANVIEN_Pass);
                 db.NHANVIENs.Add(nHANVIEN);
